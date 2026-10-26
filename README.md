@@ -2,7 +2,7 @@
 
 Work orders, journey progress, artifacts, ForgeScore, dev activity, and project context for AI-assisted development in [Forge](https://forge.opsera.ai).
 
-This plugin ships workflow skills, an agent, rules, and lifecycle hooks. Forge MCP is bundled via `mcp_config.json`; your API token is prompted on install and kept in the OS keychain.
+This plugin ships workflow skills, an agent, rules, and lifecycle hooks. Forge MCP is bundled via `mcp_config.json`; paste only the token (starts with `forge_`, no `Bearer` prefix) when prompted and kept in the OS keychain.
 
 ## Install
 

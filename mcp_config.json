@@ -9,7 +9,7 @@
         {
           "name": "FORGE_API_TOKEN",
           "title": "Forge API Token",
-          "description": "Forge API token (starts with forge_). Create one under Connect IDE \u2192 API Tokens.",
+          "description": "Paste only the token itself (it starts with forge_). Do not include the word 'Bearer'. Create one under Connect IDE \u2192 API Tokens.",
           "link": "https://forge.opsera.ai",
           "secret": true
         }

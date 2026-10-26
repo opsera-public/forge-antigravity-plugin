@@ -79,7 +79,7 @@ Do **not** call Forge tools until MCP is connected. Print this to the user:
 {
   "mcpServers": {
     "forge": {
-      "serverUrl": "https://app.softwareforge.ai/api/mcp",
+      "serverUrl": "https://forge.opsera.ai/api/mcp",
       "headers": {
         "Authorization": "Bearer forge_..."
       }

@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "mcp": {
-      "serverUrl": "https://app.softwareforge.ai/api/mcp",
+      "serverUrl": "https://forge.opsera.ai/api/mcp",
       "headers": {
         "Authorization": "Bearer ${FORGE_API_TOKEN}"
       },

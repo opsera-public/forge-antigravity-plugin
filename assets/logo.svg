@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <!-- Official Forge mark from https://app.softwareforge.ai/favicon.svg -->
+  <rect width="512" height="512" rx="96" fill="#141820"/>
+  <svg x="96" y="96" width="320" height="320" viewBox="-1 6.5 27 27">
+    <path fill="#FFB028" d="M0,25.35l4.81-4.81,2,2,1.6-1.6-2-2,4.81-4.81,2,2,1.6-1.6-2-2,4.81-4.81,5.61,5.61-4.81,4.81-2-2-1.6,1.6,2,2-1.6,1.6,2.4,2.4,1.6-1.6,5.61,5.61-4.81,4.81-5.61-5.61,1.6-1.6-2.4-2.4-1.6,1.6-2-2-1.6,1.6,2,2-4.81,4.81L0,25.35H0"/>
+  </svg>
+</svg>

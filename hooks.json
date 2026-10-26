@@ -1,0 +1,67 @@
+{
+  "forge-pre-commit": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hooks/pre-commit-validate.sh",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  },
+  "forge-pre-push": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hooks/pre-push-preflight.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "forge-dangerous-ops": {
+    "PreToolUse": [
+      {
+        "matcher": "run_command",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hooks/block-dangerous-ops.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "forge-sensitive-files": {
+    "PreToolUse": [
+      {
+        "matcher": "view_file",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./hooks/redact-secrets.sh",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  },
+  "forge-session-complete": {
+    "Stop": [
+      {
+        "type": "command",
+        "command": "./hooks/session-complete.sh",
+        "timeout": 15
+      }
+    ]
+  }
+}

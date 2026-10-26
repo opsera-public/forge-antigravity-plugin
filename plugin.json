@@ -1,0 +1,29 @@
+{
+  "name": "forge",
+  "displayName": "Forge",
+  "version": "1.3.0",
+  "description": "Forge — Work orders, journey progress, artifacts, ForgeScore, dev activity, and project context for AI-assisted development workflows.",
+  "logo": "assets/logo.svg",
+  "keywords": [
+    "forge",
+    "work-orders",
+    "mcp",
+    "developer-workflow",
+    "journey",
+    "forge-score"
+  ],
+  "suggestedPrompts": [
+    "Check Forge MCP status and connect if needed",
+    "Get my next work order and start implementing",
+    "Show journey progress and ForgeScore for this project"
+  ],
+  "disabled": false,
+  "author": {
+    "name": "Forge",
+    "email": "hi@softwareforge.ai",
+    "url": "https://app.softwareforge.ai"
+  },
+  "homepage": "https://app.softwareforge.ai",
+  "repository": "https://github.com/opsera-public/forge-antigravity-plugin",
+  "license": "Apache-2.0"
+}

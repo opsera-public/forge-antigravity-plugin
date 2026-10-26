@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "mcp": {
+      "serverUrl": "https://app.softwareforge.ai/api/mcp",
+      "headers": {
+        "Authorization": "Bearer ${FORGE_API_TOKEN}"
+      },
+      "variables": [
+        {
+          "name": "FORGE_API_TOKEN",
+          "title": "Forge API Token",
+          "description": "Forge API token (starts with forge_). Create one under Connect IDE \u2192 API Tokens.",
+          "link": "https://app.softwareforge.ai",
+          "secret": true
+        }
+      ]
+    }
+  }
+}

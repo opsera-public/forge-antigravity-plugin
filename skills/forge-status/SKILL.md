@@ -7,14 +7,14 @@ description: Validate Forge MCP connection and print a readiness status report �
 
 Validate the **live** Forge MCP connection and print a status report.
 
-This plugin does **not** bundle MCP. Forge connects via **user/global** (`~/.gemini/config/mcp_config.json`) and/or **project** (`.agents/mcp_config.json`) config — discover both before testing.
+This plugin **bundles** the Forge MCP server (shown as `forge_mcp`). On enable, Antigravity prompts for your Forge API token — paste only the token (starts with `forge_`), without a `Bearer` prefix. Servers from user/global (`~/.gemini/config/mcp_config.json`) or project (`.agents/mcp_config.json`) config also count — discover all of them before testing.
 
 ## Critical rule — tool call is the only truth
 
 **Never** mark MCP connected or disconnected based on:
 - **Settings → Plugins** (plugin hooks/skills only — no MCP credentials)
 - A red/errored row in **Customizations → MCP / Plugins** without trying a tool call
-- Assuming tools must be named `Forge MCP tool by name (server-scoped in Antigravity)` when they may be `Forge MCP tool by name (server-scoped in Antigravity)`
+- Assuming tools must be named `<server>/<tool> (e.g. forge_mcp/work_order)` when they may be `<server>/<tool> (e.g. forge_mcp/work_order)`
 
 **Always** discover servers from config + session, then **call `project(action=list)`** until one succeeds.
 
@@ -39,7 +39,7 @@ Include a server if:
 
 Also include enabled Forge MCP servers visible in this session (MCP tool list / **Customizations → MCP / Plugins**).
 
-**Try order:** `user-forge` → `forge` → other user-config servers → project-config servers → session-only servers.
+**Try order:** `forge_mcp` (bundled with this plugin) → `user-forge` → `forge` → other user-config servers → project-config servers → session-only servers.
 
 First server where **`project(action=list)`** succeeds = **`active_forge_mcp`**.
 
@@ -119,7 +119,7 @@ Forge Status
 ────────────
 MCP connection      ✅ Connected  |  ❌ Not connected  |  ⚠️ Auth failed
 MCP server used     user-forge  (active_forge_mcp — whichever answered project(action=list))
-MCP server version  forge-mcp v2.0.0 (44 non-shipping tools)
+MCP server version  forge-mcp (60 tools: 27 core / 33 shipping)
 Config sources      user: ~/.gemini/config/mcp_config.json  |  project: .agents/mcp_config.json (present/absent)
 API endpoint        https://forge.opsera.ai/api/mcp
 Projects accessible ✅ N projects  |  ❌
@@ -149,7 +149,7 @@ After core checks pass, optionally probe one tool per category — report pass o
 |---------|-----|
 | No Forge server in user or project mcp.json | Forge → **Install in IDE → Antigravity** (user/global) |
 | Project mcp.json exists but tools missing | reload Antigravity; confirm server URL is `https://forge.opsera.ai/api/mcp` |
-| `Forge MCP tool by name (server-scoped in Antigravity)` not found but `user-forge` tools exist | Use **user-forge** — connection is fine; prefix follows server name |
+| `<server>/<tool> (e.g. forge_mcp/work_order)` not found but `user-forge` tools exist | Use **user-forge** — connection is fine; prefix follows server name |
 | User says connected but tool fails | Re-run discovery on both mcp.json files; call `project(action=list)` — do not trust UI alone |
 | Work orders blocked after MCP ok | Run `repo_setup(action=configure)` with `hooks_already_present: true` (+ `workspace_project_id` / `hook_version` from `.forge/*` if present) |
 | Project lost after reload / pod restart | Read `.forge/project-id` → `repo_setup(action=configure)` with `workspace_project_id` |

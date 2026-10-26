@@ -8,7 +8,7 @@ description: >-
 
 # Journey
 
-All tools are MCP tools on your **connected Forge MCP server** (discover via `/forge-status` — typically `user-forge` or `forge`; tools as `Forge MCP tool by name (server-scoped in Antigravity)`).
+All tools are MCP tools on your **connected Forge MCP server** (discover via `/forge-status` — typically `user-forge` or `forge`; tools as `<server>/<tool> (e.g. forge_mcp/work_order)`).
 
 Backend may return `"not available in this deployment"` when `journeyState`, `journeyAgent`, or `sessions` services are not configured — report that clearly and suggest the Forge web UI.
 

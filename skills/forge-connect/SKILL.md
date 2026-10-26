@@ -7,7 +7,7 @@ description: Install and connect the Forge MCP server (one-click install), verif
 
 Set up the **live** Forge MCP connection (separate from this Antigravity plugin) and select your active project.
 
-This plugin ships hooks, skills, and commands only — **MCP is configured in user or project Antigravity settings**, not bundled with the plugin.
+This plugin **bundles** the Forge MCP server (shown as `forge_mcp`). On enable, Antigravity prompts for your Forge API token — paste only the token (starts with `forge_`), without a `Bearer` prefix. Servers from user/global (`~/.gemini/config/mcp_config.json`) or project (`.agents/mcp_config.json`) config also count — discover all of them before testing.
 
 ## Step 0 — Discover Forge MCP servers
 
@@ -34,12 +34,13 @@ Collect server names that match **any** of:
 Also add any **enabled Forge MCP servers** visible in this Antigravity session (e.g. under **Customizations → MCP / Plugins**, or MCP tool descriptors whose server name/id contains `forge`).
 
 **Try order** (dedupe, first match wins):
+0. `forge_mcp` — bundled with this plugin (token prompted when the plugin is enabled)
 1. `user-forge` — Forge **Install in IDE → Antigravity** (most common)
 2. `forge` — manual `~/.gemini/config/mcp_config.json`
 3. Any other Forge servers from user config, then project config
 4. Any remaining Forge servers from the session tool list
 
-Record the server that succeeds as **`active_forge_mcp`** — use it for all Forge tools this session (`Forge MCP tool by name (server-scoped in Antigravity)`).
+Record the server that succeeds as **`active_forge_mcp`** — use it for all Forge tools this session (`<server>/<tool> (e.g. forge_mcp/work_order)`).
 
 ## Step 1 — Test connection
 
@@ -143,7 +144,7 @@ Skip this step when Step 3 already set a project via `workspace_project_id`.
 Call `project_repos(action=list)` and report:
 
 - MCP server: **`active_forge_mcp`**
-- MCP connected: yes (forge-mcp v2.0.0)
+- MCP connected: yes (forge-mcp, 60 tools)
 - Session configured: yes
 - Active project: name + ID (restored from workspace or user-selected)
 - Linked repos: list or "none — link repos in Forge"

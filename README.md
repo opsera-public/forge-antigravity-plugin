@@ -25,7 +25,7 @@ Confirm with `agy plugin list`, then reload the Antigravity window if skills do 
 
 ## Connect Forge MCP (required)
 
-The plugin bundles `mcp_config.json` (server `forge-mcp`). On install, Antigravity prompts for your **Forge API Token** and stores it in the OS keychain — no secrets live in the plugin. Create a token under **Connect IDE** → **API Tokens** at [forge.opsera.ai](https://forge.opsera.ai).
+The plugin bundles `mcp_config.json` (server `forge_mcp`). On install, Antigravity prompts for your **Forge API Token** and stores it in the OS keychain — no secrets live in the plugin. Create a token under **Connect IDE** → **API Tokens** at [forge.opsera.ai](https://forge.opsera.ai).
 
 To use a different server definition instead, configure it manually (`serverUrl`, not `url` / `httpUrl`) in `~/.gemini/config/mcp_config.json` (user) or `.agents/mcp_config.json` (project).
 

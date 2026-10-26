@@ -31,7 +31,7 @@ if [ -n "$ws" ]; then
   PROJECT_DIR="$ws"
 fi
 
-if [ -f "$PROJECT_DIR/.agents/hooks/forge-pre-commit.sh" ] || [ -f "$PROJECT_DIR/.cursor/hooks/forge-pre-commit.sh" ]; then
+if [ -f "$PROJECT_DIR/.agents/hooks/forge-pre-commit.sh" ]; then
   echo '{"decision":"allow"}'
   exit 0
 fi

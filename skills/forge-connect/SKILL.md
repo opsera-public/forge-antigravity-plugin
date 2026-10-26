@@ -29,7 +29,7 @@ done
 Collect server names that match **any** of:
 - name is `user-forge` or `forge`
 - name contains `forge` (case-insensitive)
-- `url` or `serverUrl` contains `softwareforge.ai` or ends with `/api/mcp`
+- `url` or `serverUrl` contains `forge.opsera.ai` or ends with `/api/mcp`
 
 Also add any **enabled Forge MCP servers** visible in this Antigravity session (e.g. under **Customizations → MCP / Plugins**, or MCP tool descriptors whose server name/id contains `forge`).
 
@@ -61,7 +61,7 @@ Do **not** call Forge tools until MCP is connected. Print this to the user:
 
 **Forge MCP is not connected yet.** Connect it once using Forge one-click install:
 
-1. Open [https://app.softwareforge.ai](https://app.softwareforge.ai) and sign in.
+1. Open [https://forge.opsera.ai](https://forge.opsera.ai) and sign in.
 2. Go to **Connect IDE** using any of:
    - **Application Context** → **Connect IDE** tab
    - **Project Settings** → **Connect IDE**

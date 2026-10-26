@@ -35,7 +35,7 @@ done
 
 Include a server if:
 - name is `user-forge`, `forge`, or contains `forge`, OR
-- `url` or `serverUrl` contains `softwareforge.ai` or `/api/mcp`
+- `url` or `serverUrl` contains `forge.opsera.ai` or `/api/mcp`
 
 Also include enabled Forge MCP servers visible in this session (MCP tool list / **Customizations → MCP / Plugins**).
 
@@ -100,7 +100,7 @@ Print this and stop further validation:
 
 **Forge MCP is not connected.**
 
-1. [https://app.softwareforge.ai](https://app.softwareforge.ai) → **Install in IDE** → **Antigravity**
+1. [https://forge.opsera.ai](https://forge.opsera.ai) → **Install in IDE** → **Antigravity**
    - Application Context → **Connect IDE**, **Project Settings** → **Connect IDE**, or **User Settings** → **API Tokens**
 2. Accept the MCP install prompt in Antigravity (writes to **`~/.gemini/config/mcp_config.json`**)
 3. Confirm **Customizations → MCP / Plugins** shows a Forge server **green** (`user-forge` or `forge`)
@@ -121,7 +121,7 @@ MCP connection      ✅ Connected  |  ❌ Not connected  |  ⚠️ Auth failed
 MCP server used     user-forge  (active_forge_mcp — whichever answered project(action=list))
 MCP server version  forge-mcp v2.0.0 (44 non-shipping tools)
 Config sources      user: ~/.gemini/config/mcp_config.json  |  project: .agents/mcp_config.json (present/absent)
-API endpoint        https://app.softwareforge.ai/api/mcp
+API endpoint        https://forge.opsera.ai/api/mcp
 Projects accessible ✅ N projects  |  ❌
 Session configured  ✅ / ⚠️ Needed / ❓ Unknown
 Active project      <name + ref or "not set">
@@ -148,7 +148,7 @@ After core checks pass, optionally probe one tool per category — report pass o
 | Symptom | Fix |
 |---------|-----|
 | No Forge server in user or project mcp.json | Forge → **Install in IDE → Antigravity** (user/global) |
-| Project mcp.json exists but tools missing | reload Antigravity; confirm server URL is `https://app.softwareforge.ai/api/mcp` |
+| Project mcp.json exists but tools missing | reload Antigravity; confirm server URL is `https://forge.opsera.ai/api/mcp` |
 | `Forge MCP tool by name (server-scoped in Antigravity)` not found but `user-forge` tools exist | Use **user-forge** — connection is fine; prefix follows server name |
 | User says connected but tool fails | Re-run discovery on both mcp.json files; call `project(action=list)` — do not trust UI alone |
 | Work orders blocked after MCP ok | Run `repo_setup(action=configure)` with `hooks_already_present: true` (+ `workspace_project_id` / `hook_version` from `.forge/*` if present) |

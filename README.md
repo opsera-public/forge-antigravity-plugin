@@ -1,6 +1,6 @@
 # Forge for Antigravity
 
-Work orders, journey progress, artifacts, ForgeScore, dev activity, and project context for AI-assisted development in [Forge](https://app.softwareforge.ai).
+Work orders, journey progress, artifacts, ForgeScore, dev activity, and project context for AI-assisted development in [Forge](https://forge.opsera.ai).
 
 This plugin ships workflow skills, an agent, rules, and lifecycle hooks. Forge MCP is bundled via `mcp_config.json`; your API token is prompted on install and kept in the OS keychain.
 
@@ -25,7 +25,7 @@ Confirm with `agy plugin list`, then reload the Antigravity window if skills do 
 
 ## Connect Forge MCP (required)
 
-The plugin bundles `mcp_config.json` (server `forge-mcp`). On install, Antigravity prompts for your **Forge API Token** and stores it in the OS keychain — no secrets live in the plugin. Create a token under **Connect IDE** → **API Tokens** at [app.softwareforge.ai](https://app.softwareforge.ai).
+The plugin bundles `mcp_config.json` (server `forge-mcp`). On install, Antigravity prompts for your **Forge API Token** and stores it in the OS keychain — no secrets live in the plugin. Create a token under **Connect IDE** → **API Tokens** at [forge.opsera.ai](https://forge.opsera.ai).
 
 To use a different server definition instead, configure it manually (`serverUrl`, not `url` / `httpUrl`) in `~/.gemini/config/mcp_config.json` (user) or `.agents/mcp_config.json` (project).
 
@@ -70,6 +70,6 @@ Pass `hook_version` as a **JSON number** from `.forge/hook-version` when present
 | | |
 |--|--|
 | **Author** | Forge (`hi@softwareforge.ai`) |
-| **Homepage** | https://app.softwareforge.ai |
+| **Homepage** | https://forge.opsera.ai |
 | **Repository** | https://github.com/opsera-public/forge-antigravity-plugin |
 | **License** | Apache-2.0 |

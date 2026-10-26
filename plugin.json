@@ -21,9 +21,9 @@
   "author": {
     "name": "Forge",
     "email": "hi@softwareforge.ai",
-    "url": "https://app.softwareforge.ai"
+    "url": "https://forge.opsera.ai"
   },
-  "homepage": "https://app.softwareforge.ai",
+  "homepage": "https://forge.opsera.ai",
   "repository": "https://github.com/opsera-public/forge-antigravity-plugin",
   "license": "Apache-2.0"
 }

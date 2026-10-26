@@ -9,7 +9,7 @@ Show the current work order or pick the next available task.
 
 ## Steps
 
-0. **MCP prerequisite**: Try `project(action=list)`. If the tool is unavailable or returns auth errors, **stop immediately**. Tell the user to run **`/forge-connect`** — or use Forge **Install in IDE → Antigravity** at [app.softwareforge.ai](https://app.softwareforge.ai), then confirm **`forge`** is green under **Customizations → MCP / Plugins**. Do not proceed until MCP works.
+0. **MCP prerequisite**: Try `project(action=list)`. If the tool is unavailable or returns auth errors, **stop immediately**. Tell the user to run **`/forge-connect`** — or use Forge **Install in IDE → Antigravity** at [forge.opsera.ai](https://forge.opsera.ai), then confirm **`forge`** is green under **Customizations → MCP / Plugins**. Do not proceed until MCP works.
 
 1. Call `repo_setup(action=configure)` with `{ "ide": "antigravity", "hooks_already_present": true }` plus `workspace_project_id` / `hook_version` from `.forge/*` when present.
 

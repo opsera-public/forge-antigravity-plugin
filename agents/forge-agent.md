@@ -128,7 +128,7 @@ Forge MCP tools resolve as `Forge MCP tool by name (server-scoped in Antigravity
 
 If Forge MCP is not connected:
 
-1. Go to [https://app.softwareforge.ai](https://app.softwareforge.ai)
+1. Go to [https://forge.opsera.ai](https://forge.opsera.ai)
 2. **Install in IDE** → **Antigravity**
 3. Accept the MCP install prompt (writes **`~/.gemini/config/mcp_config.json`**, usually **`user-forge`**)
 4. Run **`/forge-status`** to confirm `project(action=list)` succeeds
